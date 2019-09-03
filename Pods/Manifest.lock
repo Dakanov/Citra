@@ -1,0 +1,76 @@
+PODS:
+  - AKMaskField (2.0.3)
+  - Alamofire (4.7.3)
+  - AlamofireObjectMapper (5.1.0):
+    - Alamofire (~> 4.1)
+    - ObjectMapper (~> 3.3)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.7.0):
+    - GoogleMaps (= 2.7.0)
+    - GooglePlaces (= 2.7.0)
+  - GooglePlaces (2.7.0):
+    - GoogleMaps/Base (= 2.7.0)
+  - IQKeyboardManagerSwift (6.1.1)
+  - ObjectMapper (3.3.0)
+  - Realm (3.9.0):
+    - Realm/Headers (= 3.9.0)
+  - Realm/Headers (3.9.0)
+  - RealmSwift (3.9.0):
+    - Realm (= 3.9.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SquareMosaicLayout (4.1.1)
+  - TRMosaicLayout (1.0.0)
+
+DEPENDENCIES:
+  - AKMaskField
+  - Alamofire
+  - AlamofireObjectMapper
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
+  - IQKeyboardManagerSwift
+  - RealmSwift
+  - SDWebImage (~> 4.0)
+  - SquareMosaicLayout
+  - TRMosaicLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AKMaskField
+    - Alamofire
+    - AlamofireObjectMapper
+    - GoogleMaps
+    - GooglePlacePicker
+    - GooglePlaces
+    - IQKeyboardManagerSwift
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+    - SDWebImage
+    - SquareMosaicLayout
+    - TRMosaicLayout
+
+SPEC CHECKSUMS:
+  AKMaskField: b6d147524813e62cd3f15475fa2200ce7a3d2620
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireObjectMapper: 3395e698901d8b0e6f48b7d0c43bd47875325102
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+  GooglePlacePicker: 59ea44db173c58486ad6123993e81feefcbce9c3
+  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Realm: 3d36f208bf3aff8335dc3298742140182bde4edb
+  RealmSwift: aa4d11917bfcfaa3ed51f219102a487ecd895447
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SquareMosaicLayout: e39ae2a6e40f516da47f28bac9bf198ab4dbb929
+  TRMosaicLayout: 1875505c48dd2877afd69a8bea7b4c1c63afa5b5
+
+PODFILE CHECKSUM: 49e82fa127c38d29015ffb66a2db6da777065c00
+
+COCOAPODS: 1.5.3
