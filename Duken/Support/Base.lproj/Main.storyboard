@@ -3053,6 +3053,15 @@
                                     <action selector="registrationPressed:" destination="N7t-bI-IyK" eventType="touchUpInside" id="hQf-hp-Nna"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wh0-vg-EtL">
+                                <rect key="frame" x="167.5" y="590" width="40" height="30"/>
+                                <state key="normal" title="Демо">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SGm-0K-3kn" kind="presentation" id="iXx-lz-1Xx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -3061,8 +3070,10 @@
                             <constraint firstItem="aIr-bK-uGO" firstAttribute="top" secondItem="Eui-6i-iiJ" secondAttribute="bottom" constant="80" id="Q5r-oF-AgZ"/>
                             <constraint firstItem="hT0-eU-KuE" firstAttribute="top" secondItem="aIr-bK-uGO" secondAttribute="bottom" constant="20" id="V7e-fS-z44"/>
                             <constraint firstItem="aIr-bK-uGO" firstAttribute="centerX" secondItem="tbg-dd-fXE" secondAttribute="centerX" id="adl-c0-UZ8"/>
+                            <constraint firstItem="wh0-vg-EtL" firstAttribute="top" secondItem="hT0-eU-KuE" secondAttribute="bottom" constant="8" id="lOW-0Z-qAB"/>
                             <constraint firstItem="Eui-6i-iiJ" firstAttribute="top" secondItem="tbg-dd-fXE" secondAttribute="top" id="osQ-1T-ZgN"/>
                             <constraint firstItem="tbg-dd-fXE" firstAttribute="trailing" secondItem="Eui-6i-iiJ" secondAttribute="trailing" id="sTI-iH-obz"/>
+                            <constraint firstItem="wh0-vg-EtL" firstAttribute="centerX" secondItem="tbg-dd-fXE" secondAttribute="centerX" id="uXL-oG-ZAo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tbg-dd-fXE"/>
                     </view>
@@ -3070,6 +3081,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="u4B-5Y-UVi"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="demoButton" destination="wh0-vg-EtL" id="Wwc-S9-pFC"/>
                         <outlet property="looginOutlet" destination="aIr-bK-uGO" id="EEu-Ng-yh9"/>
                         <outlet property="registrationOutlet" destination="hT0-eU-KuE" id="u6Q-mn-gJS"/>
                         <segue destination="llL-7P-VlE" kind="show" identifier="ToReg" id="bp9-c7-2h1"/>
@@ -3475,7 +3487,7 @@
         <!--Navigation Controller-->
         <scene sceneID="iKn-ag-bC6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="31i-WI-0V1" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Start" automaticallyAdjustsScrollViewInsets="NO" id="31i-WI-0V1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Qj-rf-WRb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -3510,7 +3522,7 @@
         <image name="triangleRight" width="21" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gHQ-4E-6Bp"/>
+        <segue reference="iXx-lz-1Xx"/>
         <segue reference="dLM-RM-mC5"/>
         <segue reference="gvs-c2-yKQ"/>
         <segue reference="6MR-wE-atw"/>

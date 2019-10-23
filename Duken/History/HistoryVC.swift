@@ -22,11 +22,15 @@ class HistoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4939995408, green: 0.6309534907, blue: 0, alpha: 1)
-        getHistoryReq()
-        size()
+        if UserDefaults.standard.string(forKey: "token") != nil {
+            getHistoryReq()
+            size()
+        }
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        demo()
     }
     
     // MARK: - Outlets

@@ -41,6 +41,7 @@ class BasketVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UI
     
     // MARK: - Actions
     @IBAction func orderPressed(_ sender: UIButton) {
+        demo()
         performSegue(withIdentifier: "ToOrder", sender: self)
     }
     

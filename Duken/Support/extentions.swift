@@ -34,6 +34,36 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    func demo(){
+        if UserDefaults.standard.string(forKey: "token") == nil{
+            exitAlert()
+            return
+        }
+    }
+    func exitAlert(){
+        let alert = UIAlertController(title: "Внимание", message: "Вы не авторизованы", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            self.logout()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    func logout(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "Start")
+        present(vc, animated: true) {
+            self.tabBarController?.selectedIndex = 0
+        }
+    }
+    func exitReqAlert(){
+        let alert = UIAlertController(title: "Выйти?", message: "", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Да", style: .default, handler: { (UIAlertAction) in
+            self.tabBarController?.selectedIndex = 0
+            self.logout()
+        }))
+        alert.addAction(UIAlertAction(title: "Нет", style: .default, handler: { (UIAlertAction) in
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     func convertDateFormatter(date: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"//this your string date format

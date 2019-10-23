@@ -24,6 +24,9 @@ class HistoryDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         life()
         basketCount()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        demo()
+    }
     
     // MARK: - Outlets
     @IBOutlet var tableView: UITableView!

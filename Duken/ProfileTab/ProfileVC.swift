@@ -19,16 +19,23 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        addressTableView.delegate = self
-        addressTableView.dataSource = self
-        self.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4939995408, green: 0.6309534907, blue: 0, alpha: 1)
-        getUserReq()
-        size()
+        if UserDefaults.standard.string(forKey: "token") != nil{
+            addressTableView.delegate = self
+            addressTableView.dataSource = self
+            self.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4939995408, green: 0.6309534907, blue: 0, alpha: 1)
+            getUserReq()
+            size()
+        }
+        demo()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getMyAddress()
-        getMyCards()
+        demo()
+        if UserDefaults.standard.string(forKey: "token") != nil{
+            getMyAddress()
+            getMyCards()
+        }
     }
 
     // MARK: - Outlets
@@ -48,8 +55,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     }
 
     @IBAction func logoutPressed(_ sender: UIButton) {
-        UserDefaults.standard.removeObject(forKey: "token")
-        performSegue(withIdentifier: "Logout", sender: self)
+      exitReqAlert()
     }
     
     // MARK: - Functions

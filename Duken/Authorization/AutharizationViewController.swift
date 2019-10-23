@@ -16,7 +16,7 @@ class AutharizationViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        demoButton.underline()
         size()
     }
     
@@ -24,6 +24,8 @@ class AutharizationViewController: UIViewController {
     
     @IBOutlet var looginOutlet: UIButton!
     @IBOutlet var registrationOutlet: UIButton!
+    @IBOutlet weak var demoButton: UIButton!
+    
     
     // MARK: - Actions
     @IBAction func loginPressed(_ sender: UIButton) {
