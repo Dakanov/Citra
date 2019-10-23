@@ -561,6 +561,7 @@
 			baseConfigurationReference = 78E2975755F97991652978B1 /* Pods-Duken.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				ENABLE_BITCODE = NO;
@@ -576,6 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.PayBay.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Duken/CloudPaymentsAPI/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -587,6 +589,7 @@
 			baseConfigurationReference = FF55278060C660BB4024640A /* Pods-Duken.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5W6A2A7L3;
 				ENABLE_BITCODE = NO;
@@ -602,6 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kz.PayBay.main;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = Duken/CloudPaymentsAPI/Header.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
