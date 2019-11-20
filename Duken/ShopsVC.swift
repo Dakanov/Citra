@@ -10,7 +10,7 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 
-class ShopsVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
+class ShopsVC: UIViewController, GMSMapViewDelegate {
     
 
     // MARK: - Variables
@@ -49,12 +49,19 @@ class ShopsVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     }
     func mapSet(){
         
-        myMap.delegate = self
+//        myMap.delegate = self
+       
         myMap.camera = camera
         myMap.settings.compassButton = true
-//        myMap.settings.myLocationButton = true
+        myMap.settings.myLocationButton = true
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        myMap.isMyLocationEnabled = true
+        if let coordinate = myMap.myLocation {
+            myMap.camera = GMSCameraPosition(target: coordinate.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        }
+        locationManager.startUpdatingLocation()
         getAddressReq()
-        
     }
     func setMarkers() {
         
@@ -71,7 +78,7 @@ class ShopsVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
             marker[i].iconView = UnselectmarkerView
             marker[i].position = point
             marker[i].title = title
-            marker[i].snippet = "India"
+            marker[i].snippet = ""
             marker[i].map = myMap
         }
     }
@@ -96,6 +103,32 @@ class ShopsVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     }
 }
 
-
+extension ShopsVC: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        // 3
+        guard status == .authorizedWhenInUse else {
+            return
+        }
+        // 4
+        locationManager.startUpdatingLocation()
+        
+        //5
+        myMap.isMyLocationEnabled = true
+        myMap.settings.myLocationButton = true
+    }
+    
+    // 6
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first else {
+            return
+        }
+        
+        // 7
+        myMap.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        
+        // 8
+        locationManager.stopUpdatingLocation()
+    }
+}
 
 
