@@ -17,9 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
-	<key>CFBundleVersion</key>
 	<string>1.11</string>
+	<key>CFBundleVersion</key>
+	<string>1.13</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>googlechromes</string>
@@ -42,10 +42,8 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Your location is required for xyz benefits for you</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Разрешите приложению использовать ваше местоположение</string>
+	<string>Пожалуйста, дайте доступ к вашему местоположению чтобы мы могли показывать вам ближайшие точки</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
